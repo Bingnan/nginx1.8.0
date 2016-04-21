@@ -1,0 +1,16 @@
+diff -Naur nginx_mod_h264_streaming-2.2.7/src/ngx_http_streaming_module.c nginx_mod_h264_streaming-2.2.7_new/src/ngx_http_streaming_module.c
+--- nginx_mod_h264_streaming-2.2.7/src/ngx_http_streaming_module.c	2010-01-10 04:32:24.000000000 +0800
++++ nginx_mod_h264_streaming-2.2.7_new/src/ngx_http_streaming_module.c	2015-08-02 22:13:24.007249429 +0800
+@@ -155,10 +155,10 @@
+   }
+ 
+   /* TODO: Win32 */
+-  if (r->zero_in_uri)
++  /*if (r->zero_in_uri)
+   {
+     return NGX_DECLINED;
+-  }
++  }*/
+ 
+   rc = ngx_http_discard_request_body(r);
+ 
